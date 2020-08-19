@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#ffffff"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="489dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill_horizontal|fill_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="8dp"
+                    android:text="Time: 0s"
+                    android:textColor="#00ff00"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/problem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="8dp"
+                    android:textColor="#ff0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill_horizontal|fill_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="8dp"
+                    android:text="Score: 0"
+                    android:textColor="#0000ff"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:padding="8dp"
+                app:columnCount="2"
+                app:rowCount="2">
+
+                <Button
+                    android:id="@+id/button0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/but1"
+                    android:padding="8dp"
+                    android:tag="0"
+                    android:text="Button"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1"
+                    android:onClick="check_answer"/>
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/but2"
+                    android:padding="8dp"
+                    android:tag="1"
+                    android:text="Button"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_column="1"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1"
+                    android:onClick="check_answer"/>
+
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/but2"
+                    android:padding="8dp"
+                    android:tag="2"
+                    android:text="Button"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="1"
+                    app:layout_rowWeight="1"
+                    android:onClick="check_answer"/>
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/but1"
+                    android:padding="8dp"
+                    android:tag="3"
+                    android:text="Button"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:layout_column="1"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="1"
+                    app:layout_rowWeight="1"
+                    android:onClick="check_answer"/>
+            </androidx.gridlayout.widget.GridLayout>
+
+            <TextView
+                android:id="@+id/output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="6dp"
+                android:textColor="#ff6a00"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/restart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/but3"
+                android:onClick="game"
+                android:padding="5dp"
+                android:text="RESTART"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/startbut"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/but3"
+        android:onClick="gamestart"
+        android:padding="12dp"
+        android:text="START"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
